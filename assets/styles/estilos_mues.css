@@ -21,7 +21,19 @@ body{
         display: inline-block;
     }
     #footer_blog{
+        display: flex;
+    
+        align-items: center;
+    
+        justify-content: space-between;
+    
         margin: 2rem;
+    
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 0;
+    
+        text-size-adjust: 1.3rem;
     
     }
     .ilustracion figcaption {
@@ -34,4 +46,120 @@ body{
     }
     nav>ul>li>a{
         text-decoration: none;
+        color: #fff;
+    }
+    
+    /* grid */
+    section {
+    
+        /* despliegate como grid */
+        display: grid;
+    
+        /* crea 12 columnas cas una de una fraccion usando la funcion repeat */
+        grid-template-columns: repeat(12, 1fr);
+    
+        /* deja que las filas (renglones) ocupen el alto que necesitan */
+        grid-auto-rows: auto;
+    
+        /* añade un espacio entre los elementos del grid de 3rem */
+        gap: 3rem;
+    }
+    /* termina grid */
+    
+    /* apunta solo a los header que son hijos directos de section */
+    section>header {
+        /* esta seccion se extendera 12 columnas */
+        grid-column: span 12;
+    }
+    
+    section>main {
+        grid-column: span 8;
+    }
+    
+    section>aside {
+        grid-column: span 4;
+    }
+    
+    section>footer {
+        grid-column: span 12;
+    }
+    section>nav {
+        font-size: 1.3rem;
+    }
+    nav>ul>li>a:hover{
+        text-decoration: underline;
+        color: greenyellow;
+    }
+    
+    /* seleccional el <ul> que es hijo de <nav> */
+    
+    nav>ul{
+        display: flex;
+    
+        align-items: center;
+    
+        justify-content: space-around;
+    
+        border-bottom: 1px solid #fff;
+    
+        padding-bottom: 0.5rem;
+    
+    }
+    article>header>hgroup{
+        display: flex;
+    
+        align-items: center;
+    
+        justify-content: space-between;
+    }
+    
+    article>header>hgroup>h2{
+        display: flex;
+    
+        align-items: center;
+    }
+    
+    article>header>hgroup>h2>img{
+        margin-right: 1rem;
+    }
+    
+    #footer_blog div:nth-last-of-type(2){
+        text-size-adjust: 0.9rem;
+    }
+    
+    aside>h2{
+        align-items: center;
+        size: 1.3rem;
+    }
+    
+    aside>div:nth-last-of-type(even){
+        background-color: rgb(44, 43, 43);
+    }
+    
+    aside div img {
+    
+        background-color: cadetblue;
+    
+        padding: 0.5rem;
+    
+        border-radius: 50%;
+    }
+    
+    .tarjeta{
+        background-color: gray;
+        width: 350px;
+        padding: 1rem;
+        border-bottom: 2px dashed white;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    .info2{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
     }
